@@ -7,7 +7,7 @@ pipeline
         {
             steps
             {
-                git 'https://github.com/intelliqittrainings/maven.git'
+                git 'https://github.com/kokkulasainath/mavenabc.git'
             }
         }
         stage("ContinuousBuild")
@@ -40,4 +40,5 @@ pipeline
                 deploy adapters: [tomcat9(credentialsId: '76cc69b9-ec40-4856-afe8-f1489bd5869f', path: '', url: 'http://172.31.28.192:8080')], contextPath: 'prodapp', war: '**/*.war'
             }
         }
-    }}
+    }
+ }
